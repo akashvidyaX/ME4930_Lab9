@@ -1,8 +1,6 @@
 import numpy as np
 
 def inverse_rotation_matrix(R): #    The inverse of a rotation matrix is simply its transpose.
-
-
     return R.T
 
 # function of R
