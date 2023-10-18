@@ -16,10 +16,11 @@ def rodrigues_rotation(theta, omega):
     R = I + np.sin(theta) * skew_omega + (1 - np.cos(theta)) * np.dot(skew_omega, skew_omega)
     return R
 
-# Test the function
-theta = math.pi / 4  # 45 degrees in radians
-omega = np.array([0, 0, 1])  # Rotation about the z-axis
+if __name__ == "__main__":
+    # Test the function
+    theta = math.pi / 4  # 45 degrees in radians
+    omega = np.array([0, 0, 1])  # Rotation about the z-axis
 
-R = rodrigues_rotation(theta, omega)
-print("The rotation matrix R is:")
-print(R)
+    R = rodrigues_rotation(theta, omega)
+    print("The rotation matrix R is:")
+    print(R)

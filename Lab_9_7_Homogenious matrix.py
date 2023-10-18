@@ -14,15 +14,16 @@ def construct_homogeneous_matrix(R, p):
     
     return T
 
-# Test the function
-R = np.array([
-    [1, 0, 0],
-    [0, 1, 0],
-    [0, 0, 1]
-])
+if __name__ == "__main__":
+    # Test the function
+    R = np.array([
+        [1, 0, 0],
+        [0, 1, 0],
+        [0, 0, 1]
+    ])
 
-p = np.array([1, 2, 3])
+    p = np.array([1, 2, 3])
 
-T = construct_homogeneous_matrix(R, p)
-print("The 4x4 homogeneous transformation matrix T is:")
-print(T)
+    T = construct_homogeneous_matrix(R, p)
+    print("The 4x4 homogeneous transformation matrix T is:")
+    print(T)

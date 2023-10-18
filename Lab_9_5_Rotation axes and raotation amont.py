@@ -10,9 +10,10 @@ def extract_axis_and_angle(omega_theta):
     
     return omega_hat, theta
 
-# Test the function
-omega_theta = np.array([1, 2, 3])
-omega_hat, theta = extract_axis_and_angle(omega_theta)
+if __name__ == "__main__":
+    # Test the function
+    omega_theta = np.array([1, 2, 3])
+    omega_hat, theta = extract_axis_and_angle(omega_theta)
 
-print("The rotation axis (omega_hat) is:", omega_hat)
-print("The rotation amount (theta) is:", theta)
+    print("The rotation axis (omega_hat) is:", omega_hat)
+    print("The rotation amount (theta) is:", theta)

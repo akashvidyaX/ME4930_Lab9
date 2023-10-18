@@ -108,44 +108,44 @@ def adjoint_representation(T):
 
 
 # #####TESTING#######
+if __name__ == "__main__":
+    # Test_Q8
 
-# # Test_Q8
+    T = np.array([
+        [1, 0, 0, 2],
+        [0, 1, 0, 3],
+        [0, 0, 1, 4],
+        [0, 0, 0, 1]
+    ])
 
-# T = np.array([
-#     [1, 0, 0, 2],
-#     [0, 1, 0, 3],
-#     [0, 0, 1, 4],
-#     [0, 0, 0, 1]
-# ])
+    R, p = extract_components(T)
 
-# R, p = extract_components(T)
+    print(T)
+    print(R)
+    print(p)
 
-# print(T)
-# print(R)
-# print(p)
+    #Testing Q9
 
-# #Testing Q9
+    # Compute the inverse
+    T_inv = compute_inverse(T)
+    print(T_inv)
 
-# # Compute the inverse
-# T_inv = compute_inverse(T)
-# print(T_inv)
+    #Proof of successful inverse calculation
 
-# #Proof of successful inverse calculation
-
-# product = np.dot(T, T_inv)
-# print(product)
-
-
-# ######Testing Q10#######
-
-# # Test
-# v = np.array([[1], [2], [3]])
-# v_homogeneous = to_homogeneous_coordinates(v)
-# print(v_homogeneous)
+    product = np.dot(T, T_inv)
+    print(product)
 
 
-# ######Testing Q11#######
+    ######Testing Q10#######
 
-# # Compute the adjoint representation
-# Ad_T = adjoint_representation(T)
-# print(Ad_T)
+    # Test
+    v = np.array([[1], [2], [3]])
+    v_homogeneous = to_homogeneous_coordinates(v)
+    print(v_homogeneous)
+
+
+    ######Testing Q11#######
+
+    # Compute the adjoint representation
+    Ad_T = adjoint_representation(T)
+    print(Ad_T)
